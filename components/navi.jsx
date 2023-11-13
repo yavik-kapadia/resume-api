@@ -1,16 +1,27 @@
-'use client'
-import React from "react";
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
-import {Logo } from "@/components/logo";
+"use client"
 
-export  function Navi() {
+import React from "react"
+import {
+  Button,
+  Link,
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+} from "@nextui-org/react"
+
+import { Logo } from "@/components/logo"
+
+export function Navi() {
   return (
     <Navbar isBordered>
       <NavbarBrand>
-        <Logo width={50} height={50} />
+        <Link href="/" color="foreground">
+          <Logo width={50} height={50} />
+        </Link>
         <p className="font-bold text-inherit">Yavik</p>
       </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden gap-4 sm:flex" justify="center">
         <NavbarItem>
           <Link color="foreground" href="#">
             Resume
@@ -38,7 +49,7 @@ export  function Navi() {
         </NavbarItem>
       </NavbarContent>
     </Navbar>
-  );
+  )
 }
 
-export default Navi;
+export default Navi
